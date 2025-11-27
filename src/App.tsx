@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import { Header } from './components/Header';
+import { Discover } from './components/Discover';
 import { RecipeGrid } from './components/RecipeGrid';
 import { MealPlanner } from './components/MealPlanner';
-import { Progress } from './components/Progress';
+import { Profile } from './components/Profile';
 import { BottomNav } from './components/BottomNav';
-import { Education } from './components/Education';
 import { ChatBot } from './components/ChatBot';
 import { ProfileManagement } from './components/ProfileManagement';
 
-type View = 'recipes' | 'products' | 'meal-plan' | 'scan' | 'education' | 'goals' | 'favorites';
+type View = 'discover' | 'meal-plan' | 'scan' | 'favorites' | 'profile';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<View>('recipes');
+  const [currentView, setCurrentView] = useState<View>('discover');
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isProfileManagementOpen, setIsProfileManagementOpen] = useState(false);
 
@@ -22,13 +22,11 @@ export default function App() {
       />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        {currentView === 'recipes' && <RecipeGrid />}
-        {currentView === 'products' && <PlaceholderView title="Products" />}
+        {currentView === 'discover' && <Discover />}
         {currentView === 'meal-plan' && <MealPlanner />}
         {currentView === 'scan' && <PlaceholderView title="Scan" />}
-        {currentView === 'education' && <Education />}
-        {currentView === 'goals' && <Progress />}
         {currentView === 'favorites' && <RecipeGrid favoritesOnly />}
+        {currentView === 'profile' && <Profile onOpenProfileManagement={() => setIsProfileManagementOpen(true)} />}
       </main>
 
       <BottomNav 

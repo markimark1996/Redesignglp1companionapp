@@ -1,4 +1,4 @@
-import { Search, ShoppingCart, HeartPulse } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { UserMenu } from './UserMenu';
 import logoImage from 'figma:asset/d924029a855390500bb4822d0a8f02ef9f5dadb5.png';
@@ -23,21 +23,6 @@ export function Header({ onOpenProfileManagement }: HeaderProps) {
               <p className="text-xs text-[#465E5A]/70">Your GLP-1 Nutrition Companion</p>
             </div>
           </div>
-
-          {/* Navigation Menu Items */}
-          <nav className="hidden md:flex items-center gap-2">
-            <button className="flex items-center gap-2 px-4 py-2 text-[#465E5A] hover:bg-[#E5F2E4] rounded transition-colors">
-              <ShoppingCart className="w-5 h-5 text-[#6264A1]" />
-              <span>My Shopping List</span>
-            </button>
-            <button 
-              onClick={onOpenProfileManagement}
-              className="flex items-center gap-2 px-4 py-2 text-[#465E5A] hover:bg-[#E5F2E4] rounded transition-colors"
-            >
-              <HeartPulse className="w-5 h-5 text-[#6264A1]" />
-              <span>My Health Profile</span>
-            </button>
-          </nav>
 
           {/* Actions */}
           <div className="flex items-center gap-3">

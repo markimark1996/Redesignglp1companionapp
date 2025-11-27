@@ -1,6 +1,6 @@
-import { UtensilsCrossed, ShoppingBag, Calendar, ScanLine, BookOpen, Target, Heart, MessageCircle } from 'lucide-react';
+import { Compass, Calendar, ScanLine, Heart, User, MessageCircle } from 'lucide-react';
 
-type View = 'recipes' | 'products' | 'meal-plan' | 'scan' | 'education' | 'goals' | 'favorites';
+type View = 'discover' | 'meal-plan' | 'scan' | 'favorites' | 'profile';
 
 interface BottomNavProps {
   currentView: View;
@@ -9,14 +9,12 @@ interface BottomNavProps {
 }
 
 export function BottomNav({ currentView, onViewChange, onOpenChat }: BottomNavProps) {
-  const navItems: { view: View; icon: typeof UtensilsCrossed; label: string }[] = [
-    { view: 'recipes', icon: UtensilsCrossed, label: 'Recipes' },
-    { view: 'products', icon: ShoppingBag, label: 'Products' },
+  const navItems: { view: View; icon: typeof Compass; label: string }[] = [
+    { view: 'discover', icon: Compass, label: 'Discover' },
     { view: 'meal-plan', icon: Calendar, label: 'Meal Plan' },
     { view: 'scan', icon: ScanLine, label: 'Scan' },
-    { view: 'education', icon: BookOpen, label: 'Education' },
-    { view: 'goals', icon: Target, label: 'Goals' },
     { view: 'favorites', icon: Heart, label: 'Favorites' },
+    { view: 'profile', icon: User, label: 'Profile' },
   ];
 
   return (
