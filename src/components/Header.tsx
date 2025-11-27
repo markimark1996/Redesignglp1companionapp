@@ -1,4 +1,4 @@
-import { Search, Bell, ShoppingCart, HeartPulse } from 'lucide-react';
+import { Search, ShoppingCart, HeartPulse } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { UserMenu } from './UserMenu';
 import logoImage from 'figma:asset/d924029a855390500bb4822d0a8f02ef9f5dadb5.png';
@@ -41,10 +41,6 @@ export function Header({ onOpenProfileManagement }: HeaderProps) {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <button className="p-2 hover:bg-[#EEEBE7] rounded transition-colors relative">
-              <Bell className="w-5 h-5 text-[#465E5A]" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-[#6264A1] rounded-full"></span>
-            </button>
             <UserMenu onOpenProfileManagement={onOpenProfileManagement} />
           </div>
         </div>
