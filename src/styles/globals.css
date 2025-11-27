@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Spoon Guru Color Palette */
+  /* Primary/Ground */
+  --ground-mint: #DDEFDC;
+  --ground-teal: #465E5A;
+  --ground-purple: #6264A1;
+  --ground-blue: #C5DFF2;
+  
+  /* Secondary/Electric */
+  --electric-blue: #B2D4EE;
+  --electric-green: #E5F2E4;
+  --electric-purple: #9697C0;
+  
+  /* Background */
+  --bg-beige: #E3DBD1;
+  --bg-warm: #EEEBE7;
+  --bg-cool: #F4F6F7;
+  
+  /* Design System Tokens */
+  --background: #F4F6F7;
+  --foreground: #465E5A;
+  --card: #ffffff;
+  --card-foreground: #465E5A;
+  --popover: #ffffff;
+  --popover-foreground: #465E5A;
+  --primary: #6264A1;
+  --primary-foreground: #ffffff;
+  --secondary: #B2D4EE;
+  --secondary-foreground: #465E5A;
+  --muted: #EEEBE7;
+  --muted-foreground: #465E5A;
+  --accent: #DDEFDC;
+  --accent-foreground: #465E5A;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(70, 94, 90, 0.15);
+  --input: transparent;
+  --input-background: #EEEBE7;
+  --switch-background: #9697C0;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #6264A1;
+  --chart-1: #6264A1;
+  --chart-2: #B2D4EE;
+  --chart-3: #DDEFDC;
+  --chart-4: #9697C0;
+  --chart-5: #C5DFF2;
+  --radius: 0.25rem;
+  --sidebar: #F4F6F7;
+  --sidebar-foreground: #465E5A;
+  --sidebar-primary: #6264A1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #EEEBE7;
+  --sidebar-accent-foreground: #465E5A;
+  --sidebar-border: rgba(70, 94, 90, 0.15);
+  --sidebar-ring: #6264A1;
+}
+
+.dark {
+  --background: #465E5A;
+  --foreground: #EEEBE7;
+  --card: #465E5A;
+  --card-foreground: #EEEBE7;
+  --popover: #465E5A;
+  --popover-foreground: #EEEBE7;
+  --primary: #9697C0;
+  --primary-foreground: #ffffff;
+  --secondary: #6264A1;
+  --secondary-foreground: #EEEBE7;
+  --muted: #465E5A;
+  --muted-foreground: #B2D4EE;
+  --accent: #6264A1;
+  --accent-foreground: #EEEBE7;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(178, 212, 238, 0.2);
+  --input: rgba(178, 212, 238, 0.2);
+  --ring: #9697C0;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #9697C0;
+  --chart-2: #B2D4EE;
+  --chart-3: #DDEFDC;
+  --chart-4: #C5DFF2;
+  --chart-5: #E5F2E4;
+  --sidebar: #465E5A;
+  --sidebar-foreground: #EEEBE7;
+  --sidebar-primary: #9697C0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #6264A1;
+  --sidebar-accent-foreground: #EEEBE7;
+  --sidebar-border: rgba(178, 212, 238, 0.2);
+  --sidebar-ring: #9697C0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  
+  /* Sharp rectangles - minimal radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.375rem;
+  
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Spoon Guru Extended Colors */
+  --color-ground-mint: #DDEFDC;
+  --color-ground-teal: #465E5A;
+  --color-ground-purple: #6264A1;
+  --color-ground-blue: #C5DFF2;
+  --color-electric-blue: #B2D4EE;
+  --color-electric-green: #E5F2E4;
+  --color-electric-purple: #9697C0;
+  --color-bg-beige: #E3DBD1;
+  --color-bg-warm: #EEEBE7;
+  --color-bg-cool: #F4F6F7;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+  
+  /* Numerical elements use monospace */
+  .numeric,
+  input[type="number"],
+  [role="timer"],
+  [data-numeric="true"] {
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
