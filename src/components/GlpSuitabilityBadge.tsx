@@ -28,8 +28,8 @@ export function GlpSuitabilityBadge({ level, variant = 'full', showDetails = fal
         };
       case 2:
         return {
-          label: 'Moderate GLP-1 Suitability',
-          shortLabel: 'Moderate',
+          label: 'Medium GLP-1 Suitability',
+          shortLabel: 'Medium',
           score: '★★',
           color: '#558B2F',
           bgColor: '#F1F8E9',

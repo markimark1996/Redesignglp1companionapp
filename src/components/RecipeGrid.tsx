@@ -19,6 +19,14 @@ export interface Recipe {
   tags: string[];
   ingredients?: string[];
   instructions?: string[];
+  dietaryAttributes?: string[];
+  nutrition?: {
+    carbs: number;
+    sugar: number;
+    fat: number;
+    saturatedFat: number;
+    sodium: number;
+  };
 }
 
 const recipes: Recipe[] = [
@@ -35,6 +43,14 @@ const recipes: Recipe[] = [
     isGlpFriendly: true,
     glpSuitability: 3,
     tags: ['High Protein', 'High Fibre', 'GLP-1 Friendly'],
+    dietaryAttributes: ['Vegetarian', 'Gluten-Free', 'High Protein'],
+    nutrition: {
+      carbs: 45,
+      sugar: 6,
+      fat: 12,
+      saturatedFat: 3,
+      sodium: 420
+    },
     ingredients: [
       '2 cups mixed greens',
       '1 cup quinoa, cooked',
@@ -67,6 +83,14 @@ const recipes: Recipe[] = [
     isGlpFriendly: true,
     glpSuitability: 3,
     tags: ['High Protein', 'Low Calorie', 'Quick'],
+    dietaryAttributes: ['Gluten-Free', 'Dairy-Free', 'Low Carb'],
+    nutrition: {
+      carbs: 18,
+      sugar: 4,
+      fat: 16,
+      saturatedFat: 2,
+      sodium: 320
+    },
     ingredients: [
       '1 chicken breast (approx. 150g)',
       '2 cups fresh spinach',
@@ -98,6 +122,14 @@ const recipes: Recipe[] = [
     isGlpFriendly: true,
     glpSuitability: 3,
     tags: ['High Protein', 'Omega-3', 'Dinner'],
+    dietaryAttributes: ['Gluten-Free', 'Dairy-Free', 'Pescatarian'],
+    nutrition: {
+      carbs: 22,
+      sugar: 5,
+      fat: 20,
+      saturatedFat: 3,
+      sodium: 380
+    },
     ingredients: [
       '2 salmon fillets (approx. 150g each)',
       '1 tbsp dijon mustard',
@@ -129,6 +161,14 @@ const recipes: Recipe[] = [
     isGlpFriendly: true,
     glpSuitability: 3,
     tags: ['High Protein', 'Breakfast', 'Quick'],
+    dietaryAttributes: ['Vegetarian', 'Gluten-Free', 'Low Carb'],
+    nutrition: {
+      carbs: 12,
+      sugar: 5,
+      fat: 18,
+      saturatedFat: 5,
+      sodium: 450
+    },
     ingredients: [
       '2 large eggs',
       '2 egg whites',
@@ -160,6 +200,14 @@ const recipes: Recipe[] = [
     isGlpFriendly: true,
     glpSuitability: 2,
     tags: ['High Protein', 'Snack', 'No Cook'],
+    dietaryAttributes: ['Vegetarian', 'Gluten-Free'],
+    nutrition: {
+      carbs: 38,
+      sugar: 18,
+      fat: 4,
+      saturatedFat: 1,
+      sodium: 85
+    },
     ingredients: [
       '1 cup Greek yogurt (plain, non-fat)',
       '1/2 cup mixed berries (blueberries, raspberries, strawberries)',
@@ -188,6 +236,14 @@ const recipes: Recipe[] = [
     isGlpFriendly: true,
     glpSuitability: 3,
     tags: ['High Protein', 'High Fibre', 'Meal Prep'],
+    dietaryAttributes: ['Gluten-Free', 'Dairy-Free'],
+    nutrition: {
+      carbs: 42,
+      sugar: 3,
+      fat: 14,
+      saturatedFat: 3,
+      sodium: 520
+    },
     ingredients: [
       '300g lean ground turkey',
       '1 cup quinoa, cooked',

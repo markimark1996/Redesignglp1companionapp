@@ -657,6 +657,10 @@
     margin-left: calc(var(--spacing) * 4);
   }
 
+  .ml-6 {
+    margin-left: calc(var(--spacing) * 6);
+  }
+
   .ml-16 {
     margin-left: calc(var(--spacing) * 16);
   }
@@ -1057,6 +1061,12 @@
     margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
   }
 
+  :where(.space-y-5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+
   :where(.space-y-6 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
@@ -1133,6 +1143,16 @@
     border-bottom-width: 1px;
   }
 
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+
+  .border-b-4 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
+  }
+
   .border-l-4 {
     border-left-style: var(--tw-border-style);
     border-left-width: 4px;
@@ -1207,12 +1227,20 @@
     background-color: oklab(52.8383% .0184621 -.0933532 / .1);
   }
 
+  .bg-\[\#9697C0\] {
+    background-color: #9697c0;
+  }
+
   .bg-\[\#9697C0\]\/20 {
     background-color: oklab(69.013% .0141165 -.0582826 / .2);
   }
 
   .bg-\[\#B2D4EE\] {
     background-color: #b2d4ee;
+  }
+
+  .bg-\[\#C5DFF2\] {
+    background-color: #c5dff2;
   }
 
   .bg-\[\#C5DFF2\]\/10 {
@@ -1245,6 +1273,10 @@
 
   .bg-\[\#DDEFDC\]\/50 {
     background-color: oklab(93.3581% -.0255865 .0186889 / .5);
+  }
+
+  .bg-\[\#E3DBD1\] {
+    background-color: #e3dbd1;
   }
 
   .bg-\[\#E3DBD1\]\/50 {
@@ -1507,12 +1539,20 @@
     padding-top: calc(var(--spacing) * 2);
   }
 
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
 
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
+  }
+
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
 
   .pb-4 {
@@ -1555,6 +1595,11 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
 
   .text-base {
