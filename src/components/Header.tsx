@@ -5,9 +5,12 @@ import logoImage from 'figma:asset/d924029a855390500bb4822d0a8f02ef9f5dadb5.png'
 
 interface HeaderProps {
   onOpenProfileManagement: () => void;
+  onNavigateToGoals?: () => void;
+  onNavigateToEducation?: () => void;
+  onNavigateToShopping?: () => void;
 }
 
-export function Header({ onOpenProfileManagement }: HeaderProps) {
+export function Header({ onOpenProfileManagement, onNavigateToGoals, onNavigateToEducation, onNavigateToShopping }: HeaderProps) {
   return (
     <header className="bg-card border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +29,12 @@ export function Header({ onOpenProfileManagement }: HeaderProps) {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <UserMenu onOpenProfileManagement={onOpenProfileManagement} />
+            <UserMenu 
+              onOpenProfileManagement={onOpenProfileManagement}
+              onNavigateToGoals={onNavigateToGoals}
+              onNavigateToEducation={onNavigateToEducation}
+              onNavigateToShopping={onNavigateToShopping}
+            />
           </div>
         </div>
 

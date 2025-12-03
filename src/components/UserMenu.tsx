@@ -1,11 +1,14 @@
-import { User, Settings, HeartPulse, LogOut, ChevronDown } from 'lucide-react';
+import { User, Settings, HeartPulse, LogOut, ChevronDown, Target, ShoppingCart } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 
 interface UserMenuProps {
   onOpenProfileManagement: () => void;
+  onNavigateToGoals?: () => void;
+  onNavigateToEducation?: () => void;
+  onNavigateToShopping?: () => void;
 }
 
-export function UserMenu({ onOpenProfileManagement }: UserMenuProps) {
+export function UserMenu({ onOpenProfileManagement, onNavigateToGoals, onNavigateToEducation, onNavigateToShopping }: UserMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -68,7 +71,35 @@ export function UserMenu({ onOpenProfileManagement }: UserMenuProps) {
               <HeartPulse className="w-5 h-5 text-[#6264A1]" />
               <div>
                 <p className="text-sm">My Health Profile</p>
-                <p className="text-xs text-[#465E5A]/60">Manage dietary preferences</p>
+                <p className="text-xs text-[#465E5A]/60">GLP-1 medication & dietary preferences</p>
+              </div>
+            </button>
+
+            <button
+              onClick={() => {
+                onNavigateToGoals?.();
+                setIsOpen(false);
+              }}
+              className="w-full flex items-center gap-3 px-4 py-3 text-[#465E5A] hover:bg-[#DDEFDC]/30 transition-colors text-left"
+            >
+              <Target className="w-5 h-5 text-[#6264A1]" />
+              <div>
+                <p className="text-sm">Goals & Progress</p>
+                <p className="text-xs text-[#465E5A]/60">Track your nutrition goals</p>
+              </div>
+            </button>
+
+            <button
+              onClick={() => {
+                onNavigateToShopping?.();
+                setIsOpen(false);
+              }}
+              className="w-full flex items-center gap-3 px-4 py-3 text-[#465E5A] hover:bg-[#DDEFDC]/30 transition-colors text-left"
+            >
+              <ShoppingCart className="w-5 h-5 text-[#6264A1]" />
+              <div>
+                <p className="text-sm">My Shopping List</p>
+                <p className="text-xs text-[#465E5A]/60">Saved ingredients and products</p>
               </div>
             </button>
 
