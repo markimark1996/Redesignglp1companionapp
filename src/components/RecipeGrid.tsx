@@ -308,6 +308,22 @@ export function RecipeGrid({ favoritesOnly }: RecipeGridProps) {
 
       {showFilters && (
         <div className="mb-6 p-4 bg-white border border-[#465E5A]/15">
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-sm text-[#465E5A]/70">
+              {selectedFilters.length > 0 
+                ? `${selectedFilters.length} filter${selectedFilters.length === 1 ? '' : 's'} selected`
+                : 'Select filters to refine results'
+              }
+            </p>
+            {selectedFilters.length > 0 && (
+              <button
+                onClick={() => setSelectedFilters([])}
+                className="text-sm text-[#6264A1] hover:text-[#465E5A] transition-colors underline"
+              >
+                Clear All
+              </button>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2">
             {filters.map((filter) => (
               <button

@@ -1794,6 +1794,10 @@
     font-style: normal;
   }
 
+  .underline {
+    text-decoration-line: underline;
+  }
+
   .accent-\[\#6264A1\] {
     accent-color: #6264a1;
   }
